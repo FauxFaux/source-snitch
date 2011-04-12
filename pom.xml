@@ -1,0 +1,35 @@
+
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.google.code.sourcesnitch</groupId>
+	<artifactId>source-snitch</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>source-snitch</name>
+
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>r07</version>
+		</dependency>
+	 <dependency>
+	  <groupId>junit</groupId>
+	  <artifactId>junit</artifactId>
+	  <version>4.4</version>
+	  <scope>test</scope>
+	 </dependency>
+	</dependencies>
+</project>
