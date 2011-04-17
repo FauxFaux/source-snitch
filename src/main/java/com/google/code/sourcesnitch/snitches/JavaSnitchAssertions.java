@@ -8,6 +8,10 @@ import com.google.code.sourcesnitch.exception.SnitchAssertionFailure;
  * @author Nick Faulkner
  */
 public interface JavaSnitchAssertions extends GenericSnitchAssertions {
+    /**
+     * Throws if any java file writes to System.out or System.err.
+     */
+    void doNotWriteToSytemOutOrErr() throws SnitchAssertionFailure;
     
     /**
      * Throws if any java file does not import the passed package.
