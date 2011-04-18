@@ -1,6 +1,7 @@
 
 package com.google.code.sourcesnitch.io.impl;
 
+import com.google.common.base.Objects;
 import com.google.code.sourcesnitch.exception.SnitchFileReadException;
 import com.google.code.sourcesnitch.io.SourceFile;
 import com.google.common.io.CharStreams;
@@ -54,5 +55,10 @@ public class FileWrappingSourceFile implements SourceFile {
     @Override
     public String getFileName() {
         return wrappedFile.getName();
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this).addValue(this.getFileName()).toString();
     }
 }
