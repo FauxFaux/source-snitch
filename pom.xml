@@ -3,11 +3,26 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.sourcesnitch</groupId>
     <artifactId>source-snitch</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>source-snitch</name>
-
     <packaging>jar</packaging>
-
+    <url>http://code.google.com/p/source-snitch/</url>
+    <scm>
+        <connection>scm:hg:https://source-snitch.googlecode.com/hg/</connection>
+        <developerConnection>scm:hg:https://source-snitch.googlecode.com/hg/</developerConnection>
+    </scm>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Nick Faulkner</name>
+        </developer>
+    </developers>
     <build>
         <plugins>
             <plugin>
@@ -16,6 +31,30 @@
                     <source>1.5</source>
                     <target>1.5</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

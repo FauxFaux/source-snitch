@@ -1,6 +1,7 @@
 
 package com.google.code.sourcesnitch.snitches.impl;
 
+import com.google.common.collect.Lists;
 import com.google.code.sourcesnitch.exception.SnitchAssertionFailure;
 import com.google.code.sourcesnitch.io.SourceFile;
 import com.google.common.collect.Sets;
@@ -32,7 +33,7 @@ public class GenericSnitchImplTest {
         when(mockSourceFileTwo.getFileName()).thenReturn("testtwo.txt");
         when(mockSourceFileTwo.readFully()).thenReturn("test two test");
 
-        snitch = new GenericSnitchImpl(Sets.newHashSet(mockSourceFileOne, mockSourceFileTwo));
+        snitch = new GenericSnitchImpl(Sets.newLinkedHashSet(Lists.newArrayList(mockSourceFileOne, mockSourceFileTwo)));
     }
 
     @Test

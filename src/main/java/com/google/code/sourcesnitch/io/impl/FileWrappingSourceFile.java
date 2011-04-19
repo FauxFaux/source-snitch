@@ -23,7 +23,7 @@ public class FileWrappingSourceFile implements SourceFile {
 
     /**
      * 
-     * @param file to wrap
+     * @param wrappedFile file to wrap
      */
     public FileWrappingSourceFile(File wrappedFile) throws FileNotFoundException, IOException {
         this.wrappedFile = checkNotNull(wrappedFile, "File must be specified");
